@@ -52,7 +52,15 @@ navs[3].textContent = siteContent.nav["nav-item-4"];
 navs[4].textContent = siteContent.nav["nav-item-5"];
 navs[5].textContent = siteContent.nav["nav-item-6"];
 
+const newNav1 = document.createElement('a');
+newNav1.textContent = "License";
+const newNav2 = document.createElement('a');
+newNav2.textContent = "Corporate";
 
+const parentNav = document.querySelector('header nav');
+
+parentNav.appendChild(newNav1);
+parentNav.prepend(newNav2);
 
 Array.from(navs).forEach( e =>{
   e.style.color = 'green';
